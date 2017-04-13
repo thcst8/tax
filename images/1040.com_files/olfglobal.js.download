@@ -1,0 +1,71 @@
+﻿var oltp =
+{
+    app:
+    {
+        //we have to set this from an asp.net view and
+        //we must do it immediately and it must be set before...
+        contextPath: "",
+        apiBaseUrl: "",
+        currentTaxYear: 0,
+        //key must come from config file
+        siftScienceKey: "",
+        staticImageLocation: "",
+        staticJsLocation: "",
+        staticContentLocation: "",
+        staticCssLocation: "",
+        buildNumber: "",
+        brandAcctNum: 0,
+        signOutUrl: "",
+        isMobile: true,
+        debugMode: false,
+        scripts: {
+                
+            routeChange: function () { 
+                                    // populated at load. 
+            },
+            efile: function(oltp_taxpayerid, oltp_isExtension)
+            {
+
+            },
+            payment: function(oltp_taxpayerid, oltp_amount, oltp_invoiceid)
+            {
+
+            },
+            signin: function () {
+
+            },
+            signup: function () {
+
+            },
+            captureDevice: function(){}
+
+        }
+
+    },
+   
+    user:
+    {
+        taxpayerId: 0,
+        isImpersonating: false,
+        isAnonymous: false,
+        referralAcctNum: 0,
+        isFfa: false
+    },
+
+    clientMonitor:
+    {
+        validationEventId: 0,
+        validationMessages: [],
+        validationReportIsHandled: false
+    },
+
+    // Create objects that will be assigned 'isEnabled' values dynamically in _Head
+    oneTimeEventNotificationCenter: {
+        notificationTriggers: {
+            overrideEntry: {eventId : 1},
+            adjustmentEntry: { eventId: 2 },
+            amountRound: { eventId: 3 }
+        }
+    }
+}
+
